@@ -1,11 +1,9 @@
-#John's Shady Website (aka JSW)
-
 This is my first website project in collaboration with Cid and Carlo.
 
 Hi this is Cid's first edit.
 
 
-##Github shortcuts
+## Github shortcuts
 
 **to start your repository**
 
@@ -29,14 +27,14 @@ git push origin master
 ```
 
 
-##How to run the website
+## How to run the website
 type this
 ```
 ey some
 ```
 
 
-##Things that needs to be done
+## Things that needs to be done
 
 - make the website
 - get the content
