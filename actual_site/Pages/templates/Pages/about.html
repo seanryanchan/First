@@ -1,0 +1,20 @@
+{% load static %}
+<img src="{% static 'Pages/logo.jpg' %}">
+
+<ul>
+    <li>
+        <a href="{% url 'index' %}">First Asia</a>
+    </li>
+    <li>
+        <a href="{% url 'products' %}">Products</a>
+    </li>
+    <li>
+        <a href="{% url 'about' %}">About Us</a>
+    </li>
+    <li>
+        <a href="{% url 'business' %}">Business With Us</a>
+    </li>
+    <li>
+        <a href="{% url 'contact' %}">Contact Us</a>
+    </li>
+</ul>
