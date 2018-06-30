@@ -39,7 +39,8 @@ git push origin master
 type in terminal
 ```
 pip install pillow
-=======
+```
+
 **installing pip**
 
 type in terminal
@@ -70,18 +71,6 @@ type in terminal
 ```
 pip install pillow
 ```
-
-<<<<<<< HEAD
-## How to run the website
-
-**running the server**
-open the directory/actual_site, then type
-```
-python manage.py runserver
-```
-
-**viewig the site**
-=======
 
 ## How to run the website
 
