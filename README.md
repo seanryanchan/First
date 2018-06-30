@@ -58,6 +58,14 @@ pip install Django==2.0.5
 >>>>>>> a93ccf8057fb84ecdf85d254a6b36598a353b326
 ```
 
+
+**installing python magic**
+
+type in terminal
+```
+pip install python-magic
+```
+
 **installing pillow**
 
 type in terminal
@@ -86,10 +94,24 @@ open the directory/actual_site, then type
 python manage.py runserver
 ```
 
-**viewig the site**
+**viewing the site**
 
 >>>>>>> a93ccf8057fb84ecdf85d254a6b36598a353b326
 open your browser and type
 ```
 localhost:8000
 ```
+
+## Opening the administrative section of the website
+
+**log-in**
+
+to go to the log-in portal type in the url bar of the browser
+```
+localhost:8000/admin/
+```
+
+**user credentials**
+
+username: admin
+password: FirstAsia
