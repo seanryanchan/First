@@ -100,4 +100,17 @@ localhost:8000/admin/
 **user credentials**
 
 username: admin
+
 password: FirstAsia
+
+**adding a product**
+
+1. Press the products link
+
+2. Then press the add product link in the upper right
+
+3. Press today and now
+
+4. Type name, description, and upload photo
+
+5. Then look for the photo using the browse button
