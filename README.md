@@ -29,18 +29,12 @@ git push origin master
 
 ## How to install dependencies
 
-<<<<<<< HEAD
-**installing django**
-type in terminal
-```
-git push origin master
-```
-
 **installing pillow**
 type in terminal
 ```
-pip install pillow
-=======
+pip install Pillow
+```
+
 **installing pip**
 
 type in terminal
@@ -55,7 +49,6 @@ ln -s /usr/bin/pip3 /usr/bin/pip
 type in terminal
 ```
 pip install Django==2.0.5
->>>>>>> a93ccf8057fb84ecdf85d254a6b36598a353b326
 ```
 
 
@@ -65,25 +58,6 @@ type in terminal
 ```
 pip install python-magic
 ```
-
-**installing pillow**
-
-type in terminal
-```
-pip install pillow
-```
-
-<<<<<<< HEAD
-## How to run the website
-
-**running the server**
-open the directory/actual_site, then type
-```
-python manage.py runserver
-```
-
-**viewig the site**
-=======
 
 ## How to run the website
 
@@ -96,7 +70,6 @@ python manage.py runserver
 
 **viewing the site**
 
->>>>>>> a93ccf8057fb84ecdf85d254a6b36598a353b326
 open your browser and type
 ```
 localhost:8000
@@ -114,4 +87,17 @@ localhost:8000/admin/
 **user credentials**
 
 username: admin
+
 password: FirstAsia
+
+**adding a product**
+
+1. Press the products link
+
+2. Then press the add product link in the upper right
+
+3. Press today and now
+
+4. Type name, description, and upload photo
+
+5. Then look for the photo using the browse button
