@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% load static %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,17 +11,17 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- off-canvas -->
-    <link href="css/mobile-menu.css" rel="stylesheet">
+    <link href="{% static 'Pages/css/mobile-menu.css' %}" rel="stylesheet">
     <!-- font-awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- Flat Icon -->
-    <link href="fonts/flaticon/flaticon.css" rel="stylesheet">
+    <link href="{% static 'Pages/fonts/flaticon/flaticon.css' %}" rel="stylesheet">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Style CSS -->
-    <link href="css/style.css" rel="stylesheet">
-
+    <link href="{% static 'Pages/css/style.css' %}" rel="stylesheet">
+    {% get_media_prefix as MEDIA_PREFIX %}
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -87,19 +88,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="#navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right main-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="active"><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                 <li class="dropdown dropdown-toggle"><a href="#" data-toggle="dropdown">Dropdown <span><i class="fa fa-angle-down"></i></span></a>
-                    <ul class="dropdown-menu">
-                            <li><a href="#">Awesome Features</a></li>
-                            <li><a href="#">Clean Interface</a></li>
-                            <li><a href="#">Available Possibilities</a></li>
-                            <li><a href="#">Responsive Design</a></li>
-                            <li><a href="#">Pixel Perfect Graphics</a></li>
-                    </ul>
-                </li>
+                <li><a href="{% url 'index' %}">First Asia</a></li>
+                <li class="active"><a href="{% url 'products' %}">Products</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'business' %}">Business With Us</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
             </ul>
 
         </div>
@@ -113,7 +106,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>Our Services</h2>
+                <h2>Our Products</h2>
             </div>
         </div>
     </div>
@@ -333,12 +326,11 @@
             <span class="copytext">&copy; MARKETER. All rights reserved. | Design By: <a href="http://uicookies.com">uiCookies</a></span>
 
             <ul class="list-inline pull-right">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">First Asia</a></li>
+                <li class="active"><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Business With Us</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         </div><!-- .container -->
 
@@ -357,10 +349,11 @@
     <div>
         <div>
             <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="{% url 'index' %}">First Asia</a></li>
+                <li><a href="{% url 'products' %}">Products</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'business' %}">Business With Us</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
             </ul>
         </div>
     </div>
@@ -372,13 +365,43 @@
 <!-- #main-wrapper -->
 
 <!-- Script -->
-<script src="js/jquery-2.1.4.min.js"></script>
+<script src="{% static 'Pages/js/jquery-2.1.4.min.js' %}"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/mobile-menu.js"></script>
-<script src="js/flexSlider/jquery.flexslider-min.js"></script>
-<script src="js/scripts.js"></script>
+<script src="{% static 'Pages/js/smoothscroll.js' %}"></script>
+<script src="{% static 'Pages/js/mobile-menu.js' %}"></script>
+<script src="{% static 'Pages/js/scripts.js' %}"></script>
+
+<img src="{% static 'Pages/img/logo.jpg' %}" alt="First Asia Manufacturing Logo">
+
+<ul>
+    <li>
+        <a href="{% url 'index' %}">First Asia</a>
+    </li>
+    <li>
+        <a href="{% url 'products' %}">Products</a>
+    </li>
+    <li>
+        <a href="{% url 'about' %}">About Us</a>
+    </li>
+    <li>
+        <a href="{% url 'business' %}">Business With Us</a>
+    </li>
+    <li>
+        <a href="{% url 'contact' %}">Contact Us</a>
+    </li>
+</ul>
+<h1>Our Products</h1>
+{% if product_list %}
+<ul>
+    {% for product in product_list %}
+    <li>
+        <img src="{% url 'getProductPhoto' product.id %}" width="320px"/>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
 </body>
 </html>
