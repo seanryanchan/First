@@ -29,16 +29,10 @@ git push origin master
 
 ## How to install dependencies
 
-**installing django**
-type in terminal
-```
-git push origin master
-```
-
 **installing pillow**
 type in terminal
 ```
-pip install pillow
+pip install Pillow
 ```
 
 **installing pip**
@@ -63,13 +57,6 @@ pip install Django==2.0.5
 type in terminal
 ```
 pip install python-magic
-```
-
-**installing pillow**
-
-type in terminal
-```
-pip install pillow
 ```
 
 ## How to run the website
