@@ -29,7 +29,6 @@ git push origin master
 
 ## How to install dependencies
 
-<<<<<<< HEAD
 **installing django**
 type in terminal
 ```
@@ -55,7 +54,6 @@ ln -s /usr/bin/pip3 /usr/bin/pip
 type in terminal
 ```
 pip install Django==2.0.5
->>>>>>> a93ccf8057fb84ecdf85d254a6b36598a353b326
 ```
 
 
@@ -96,7 +94,6 @@ python manage.py runserver
 
 **viewing the site**
 
->>>>>>> a93ccf8057fb84ecdf85d254a6b36598a353b326
 open your browser and type
 ```
 localhost:8000
