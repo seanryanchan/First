@@ -29,6 +29,7 @@ git push origin master
 
 ## How to install dependencies
 
+<<<<<<< HEAD
 **installing django**
 type in terminal
 ```
@@ -39,9 +40,32 @@ git push origin master
 type in terminal
 ```
 pip install pillow
+=======
+**installing pip**
+
+type in terminal
+```
+sudo apt install python3-pip -y
+which pip3
+ln -s /usr/bin/pip3 /usr/bin/pip
 ```
 
+**installing django**
 
+type in terminal
+```
+pip install Django==2.0.5
+>>>>>>> a93ccf8057fb84ecdf85d254a6b36598a353b326
+```
+
+**installing pillow**
+
+type in terminal
+```
+pip install pillow
+```
+
+<<<<<<< HEAD
 ## How to run the website
 
 **running the server**
@@ -51,6 +75,20 @@ python manage.py runserver
 ```
 
 **viewig the site**
+=======
+
+## How to run the website
+
+**running the server**
+
+open the directory/actual_site, then type
+```
+python manage.py runserver
+```
+
+**viewig the site**
+
+>>>>>>> a93ccf8057fb84ecdf85d254a6b36598a353b326
 open your browser and type
 ```
 localhost:8000
