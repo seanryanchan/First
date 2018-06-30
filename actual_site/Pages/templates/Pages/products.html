@@ -43,32 +43,6 @@
 <div class="uc-mobile-menu-pusher">
 
 <div class="content-wrapper">
-<div class="header-top visible-md visible-lg">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-4">
-                <ul class="social-icon">
-                <li><a href="" class="fa fa-facebook" aria-hidden="true"> </a></li>
-                <li><a href="" class="fa fa-twitter" aria-hidden="true"> </a></li>
-                <li><a href="" class="fa fa-pinterest-p" aria-hidden="true"> </a></li>
-                <li><a href="" class="fa fa-google-plus" aria-hidden="true"> </a></li>
-                <li><a href="" class="fa fa-linkedin" aria-hidden="true"> </a></li>
-
-                </ul>
-            </div>
-
-            <div class="col-sm-12 col-md-8">
-                <ul class="top-contact pull-right">
-                    <li class="phone"><i class="fa fa-phone-square" aria-hidden="true"></i> +42-123-4567</li>
-                    <li class="email"><i class="fa fa-envelope" aria-hidden="true"></i>
-                    contact@domain.com
-                    </li>
-                    <li class="get-a-quote"><a href="#" title="">Get a Quote</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- .navbar-top -->
 <nav class="navbar m-menu navbar-default">
     <div class="container">
@@ -288,55 +262,71 @@
 </section>
 <!-- .about-text-->
 
-<footer class="footer">
 
-    <!-- Footer Widget Section -->
-    <div class="footer-widget-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="footer-logo">
-                        <a href="#"><img class="img-responsive" src="img/logo-footer.png" alt=""></a>
-                    </div>
-                </div><!-- /.col-sm-4 -->
-
-                <div class="col-md-8">
-                    <div class="footer-text">
-                      <p>Assertively architect synergistic platforms vis-a-vis premium results. Synergistically facilitate high-payoff e-services rather than top-line sources. Collaboratively drive market positioning infomediaries without real-time e-commerce.</p>
-
-                      <ul>
-                          <li class="phone"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 1-677-124-44227
-                          <small><i class="fa fa-clock-o" aria-hidden="true"></i> Mon - Sat 8.00 - 18.00h</small></li>
-                          <li class="address">
-                          <address>
-                            <i class="fa fa-map-pin" aria-hidden="true"></i>
-                            437 S Olive St, Los Angeles
-                          </address>
-                          </li>
-                      </ul>
-
-                    </div>
-                </div><!-- /.col-sm-4 -->
-            </div>
+<section class="case-studies">
+    <div class="container">
+        <div class="section-title text-center">
+            <h1>PRODUCTS</h1>
+            <p>CAN SHOW VARIOUS PHOTOS OF PRODUCTS<br>
+            A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy<br>with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
         </div>
-    </div><!-- /.Footer Widget Section -->
 
-    <div class="copyright-section">
-        <div class="container clearfix">
-            <span class="copytext">&copy; MARKETER. All rights reserved. | Design By: <a href="http://uicookies.com">uiCookies</a></span>
+        {% if product_list %}
+            {% for product in product_list %}
+            <!-- <img src="{% url 'getProductPhoto' product.id %}" width="360px"/> -->
+                {% if forloop.counter|divisibleby:3 %}
+                    <div class="row text-center">
+                        <div class="col-sm-4">
+                            <div class="case-studies-content">
+                                <img class="img-responsive" src="{% url 'getProductPhoto' product_list.forloop.counter.id %}"/>
+                                <!-- <img class="img-responsive" src="img/helmet.jpg" alt="case sudies.png"> -->
+                                <h2>HELMET</h2>
+                            </div>
+                        </div>
+                        <!-- <div class="col-sm-4">
+                            <div class="case-studies-content">
+                                <img class="img-responsive" src="{% url 'getProductPhoto' product.id %}"/>
+                                <img class="img-responsive" class="center" src="img/phone.jpg" alt="case sudies.png">
+                                <h2>PHONE</h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="case-studies-content">
+                                <img class="img-responsive" src="{% url 'getProductPhoto' product.id %}"/>
+                                <img class="img-responsive" src="img/img-case-sudies-3.png" alt="case sudies.png">
+                                <h2>CARS</h2>
+                            </div>
+                        </div> -->
+                    </div>
+                {% endif %}
+            {% endfor %}
+        
 
-            <ul class="list-inline pull-right">
-                <li><a href="#">First Asia</a></li>
-                <li class="active"><a href="#">Products</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Business With Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </div><!-- .container -->
+        <!-- <div class="row">
+            <div class="col-sm-4">
+                <div class="case-studies-content">
+                    <img class="img-responsive" src="img/img-case-sudies-4.png" alt="case sudies.png">
+                    <h2>CONTACT INFORMATION</h2>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="case-studies-content">
+                    <img class="img-responsive" src="img/img-case-sudies-5.png" alt="case sudies.png">
+                    <h2>ANOTHER CONTACT</h2>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="case-studies-content">
+                    <img class="img-responsive" src="img/img-case-sudies-6.png" alt="case sudies.png">
+                    <h2>COMPANY ADDRESS</h2>
+                </div>
+            </div>
+        </div> --><!-- /.row -->
 
-    </div><!-- .copyright-section -->
-</footer>
-<!-- .footer -->
+        {% endif %}
+    </div><!-- /.container -->
+</section>
+<!-- /.client-logo -->
 
 </div>
 <!-- .content-wrapper -->
