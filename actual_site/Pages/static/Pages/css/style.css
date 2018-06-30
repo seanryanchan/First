@@ -14,7 +14,7 @@ Global Typography
 h1, h2, h3, h4, h5, h6 {
     margin      : 0 0 15px;
     color       : #303841;
-    
+
     }
 
 h1 {
@@ -56,7 +56,7 @@ h6 {
 LINK STYLE
 ------------------------------------------*/
 a {
-    color              : #4d6de3;
+    color              : #24b503;
     text-decoration    : none;
     -webkit-transition : all 0.3s ease 0s;
     -moz-transition    : all 0.3s ease 0s;
@@ -128,27 +128,27 @@ ul {
 
 /*btn-primary*/
 .btn-primary {
-    background-color : #4d6de3;
-    border-color     : #4d6de3;
+    background-color : #24b503;
+    border-color     : #24b503;
     }
 
 .btn-primary:hover{
     background: #4760bb;
     color:#fff;
-    border-color     : #4d6de3;
+    border-color     : #24b503;
 }
 
 /*btn-default*/
 .btn-default {
-    color            : #4d6de3;
+    color            : #24b503;
     background-color : transparent;
     border-color     : #e1e1e1;
     }
 
 .btn-default:hover{
-    background: #4d6de3;
+    background: #24b503;
     color:#fff;
-    border-color: #4d6de3;
+    border-color: #24b503;
 }
 
 
@@ -294,27 +294,27 @@ Shortcode Content
 
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover {
-    color            : #4d6de3;
+    color            : #24b503;
     background-color : transparent;
     }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
-    color            : #4d6de3;
+    color            : #24b503;
     background-color : transparent;
     }
 
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover {
-    color : #4d6de3;
+    color : #24b503;
     }
 
 .nav-cta {
     float              : right;
     margin             : 3px 0 0 40px;
     line-height        : 34px;
-    background         : #4d6de3;
+    background         : #24b503;
     width              : 34px;
     height             : 34px;
     text-align         : center;
@@ -447,7 +447,7 @@ Shortcode Content
     }
 
 .dropdown-menu li a:hover {
-    color            : #4d6de3;
+    color            : #24b503;
     background-color : #f5f5f5;
     }
 
@@ -584,7 +584,7 @@ Shortcode Content
 }
 
 .header-top .social-icon li a:hover{
-    opacity: .5; 
+    opacity: .5;
 }
 
 /* Phone, Emial, Get a Quote */
@@ -631,13 +631,13 @@ Shortcode Content
     }
 
     .header-top .top-contact li.get-a-quote a{
-        padding: 8px 15px; 
+        padding: 8px 15px;
     }
 
     .top-contact.pull-right{
         float: none !important;
     }
-    
+
 }
 
 
@@ -795,7 +795,7 @@ Shortcode Content
     font-size: 30px;
     margin: 0;
     padding: 0;
-    color: #4d6de3;
+    color: #24b503;
 }
 
 /* ------------------
@@ -847,7 +847,7 @@ Shortcode Content
     border: 1px solid #f9f9f9;
     border-radius: 0;
 }
-@media (max-width : 767px) { 
+@media (max-width : 767px) {
     .team-member .thumbnail {
         margin-bottom: 30px;
     }
@@ -994,7 +994,7 @@ Shortcode Content
 
 
 /* --------------------------
- * Client Logo 
+ * Client Logo
  *---------------------------*/
 .client-logo {
     padding: 40px 0;
@@ -1060,7 +1060,7 @@ Shortcode Content
     left:0;
     right: 0;
     bottom: 0;
-    background: rgba(77, 109, 227, 0.76);
+    background: rgba(167, 45, 45, 0.76);
     }
 
 .single-page-title h2 {
@@ -1328,7 +1328,7 @@ icon-style
 
 
 .contact-detail .promo-icon-blue{
-    background: #4d6de3;
+    background: #24b503;
     color: #ffffff;
 }
 
