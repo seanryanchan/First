@@ -55,7 +55,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+            <a class="navbar-brand" href="index.html">
+                <img src="{% static 'Pages/' %}img/logo.png" alt="">
+                <img src="{% static 'Pages/img/logo.jpg' %}" alt="First Asia Manufacturing Logo">
+
+            </a>
         </div>
 
 
@@ -87,6 +91,28 @@
 </section>
 <!-- .page-title -->
 
+<section class="case-studies" id="products-catalogue">
+    <div class="container">
+        <div class="section-title text-center">
+            <h1>PRODUCTS</h1>
+            <p>CAN SHOW VARIOUS PHOTOS OF PRODUCTS<br>
+            A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy<br>with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
+        </div>
+
+        {% if product_list %}
+            {% for product in product_list %}
+                {% cycle '<div class="row text-center">' '' '' %}
+                    <div class="col-sm-4">
+                        <div class="case-studies-content">
+                            <img class="img-responsive" src="{% url 'getProductPhoto' product.id %}" alt="{{ product.title }}"/>
+                            <h2>{{ product.title }}</h2>
+                        </div>
+                    </div>
+                {% cycle '' '' '</div>' %}
+            {% endfor %}
+        {% endif %}
+    </div><!-- /.container -->
+</section>
 
 <section class="section-content-left-icon">
     <div class="container">
@@ -262,72 +288,6 @@
 </section>
 <!-- .about-text-->
 
-
-<section class="case-studies">
-    <div class="container">
-        <div class="section-title text-center">
-            <h1>PRODUCTS</h1>
-            <p>CAN SHOW VARIOUS PHOTOS OF PRODUCTS<br>
-            A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy<br>with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
-        </div>
-
-        {% if product_list %}
-            {% for product in product_list %}
-            <!-- <img src="{% url 'getProductPhoto' product.id %}" width="360px"/> -->
-                {% if forloop.counter|divisibleby:3 %}
-                    <div class="row text-center">
-                        <div class="col-sm-4">
-                            <div class="case-studies-content">
-                                <img class="img-responsive" src="{% url 'getProductPhoto' product_list.forloop.counter.id %}"/>
-                                <!-- <img class="img-responsive" src="img/helmet.jpg" alt="case sudies.png"> -->
-                                <h2>HELMET</h2>
-                            </div>
-                        </div>
-                        <!-- <div class="col-sm-4">
-                            <div class="case-studies-content">
-                                <img class="img-responsive" src="{% url 'getProductPhoto' product.id %}"/>
-                                <img class="img-responsive" class="center" src="img/phone.jpg" alt="case sudies.png">
-                                <h2>PHONE</h2>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="case-studies-content">
-                                <img class="img-responsive" src="{% url 'getProductPhoto' product.id %}"/>
-                                <img class="img-responsive" src="img/img-case-sudies-3.png" alt="case sudies.png">
-                                <h2>CARS</h2>
-                            </div>
-                        </div> -->
-                    </div>
-                {% endif %}
-            {% endfor %}
-        
-
-        <!-- <div class="row">
-            <div class="col-sm-4">
-                <div class="case-studies-content">
-                    <img class="img-responsive" src="img/img-case-sudies-4.png" alt="case sudies.png">
-                    <h2>CONTACT INFORMATION</h2>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="case-studies-content">
-                    <img class="img-responsive" src="img/img-case-sudies-5.png" alt="case sudies.png">
-                    <h2>ANOTHER CONTACT</h2>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="case-studies-content">
-                    <img class="img-responsive" src="img/img-case-sudies-6.png" alt="case sudies.png">
-                    <h2>COMPANY ADDRESS</h2>
-                </div>
-            </div>
-        </div> --><!-- /.row -->
-
-        {% endif %}
-    </div><!-- /.container -->
-</section>
-<!-- /.client-logo -->
-
 </div>
 <!-- .content-wrapper -->
 </div>
@@ -362,36 +322,6 @@
 <script src="{% static 'Pages/js/smoothscroll.js' %}"></script>
 <script src="{% static 'Pages/js/mobile-menu.js' %}"></script>
 <script src="{% static 'Pages/js/scripts.js' %}"></script>
-
-<img src="{% static 'Pages/img/logo.jpg' %}" alt="First Asia Manufacturing Logo">
-
-<ul>
-    <li>
-        <a href="{% url 'index' %}">First Asia</a>
-    </li>
-    <li>
-        <a href="{% url 'products' %}">Products</a>
-    </li>
-    <li>
-        <a href="{% url 'about' %}">About Us</a>
-    </li>
-    <li>
-        <a href="{% url 'business' %}">Business With Us</a>
-    </li>
-    <li>
-        <a href="{% url 'contact' %}">Contact Us</a>
-    </li>
-</ul>
-<h1>Our Products</h1>
-{% if product_list %}
-<ul>
-    {% for product in product_list %}
-    <li>
-        <img src="{% url 'getProductPhoto' product.id %}" width="320px"/>
-    </li>
-    {% endfor %}
-</ul>
-{% endif %}
 
 </body>
 </html>
