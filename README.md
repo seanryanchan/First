@@ -35,6 +35,31 @@ git commit -m "Your comment goes here"
 git push origin master
 ```
 
+**to switch to branch websiteA**
+
+first add and commit the changes with
+```
+
+git add .
+git commit -m "I am finalizing this branch and switching to branch websiteA"
+```
+
+then go to another branch
+```
+git checkout websiteA
+```
+
+**to reset local changes made to branch websiteA**
+
+resetting mistakes made to one branch
+
+```
+git reset
+git pull origin websiteA
+```
+
+
+
 
 ## How to install dependencies
 
